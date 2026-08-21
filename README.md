@@ -8,9 +8,9 @@
 ├── paper/          论文 LaTeX 源码（XeLaTeX，真实数学公式，公式编号 (1)–(53)）
 │   ├── paper.tex
 │   ├── appendix-coef.tex   附录 A 系数表（由代码生成）
-│   └── figs/               论文插图（图 2–图 9）
+│   └── figs/               论文插图（图 2–图 10）
 ├── code/           Python 计算与绘图代码（可完整复现论文全部数值与图表）
-│   ├── scripts/    01_analyze.py / 02_figures.py / 03_equations.py / 04_build_docx.py
+│   ├── scripts/    01_analyze.py / 02_figures.py / 03_equations.py / 04_build_docx.py / 05_fig10.py
 │   ├── data/       附件 2 原始数据
 │   ├── figs/       论文插图
 │   ├── eqs/        公式 PNG（Word 版用）
@@ -39,6 +39,7 @@ python scripts/01_analyze.py     # 全部计算 -> report.json
 python scripts/02_figures.py     # 论文插图
 python scripts/03_equations.py   # 公式 PNG
 python scripts/04_build_docx.py  # Word 版论文
+python scripts/05_fig10.py       # 图 10（蒙特卡洛分布图）
 ```
 
 关键设定（与论文附录 B 一致）：三次响应面 + Ridge（α=10⁻¹⁰）；5 次重复 5 折交叉验证（种子 6）；84 组样本极值归一化；Pareto 候选权重步长 0.05（115 个方案）；后悔值权重步长 0.01；蒙特卡洛每方案 100000 次抽样（种子 31）。
